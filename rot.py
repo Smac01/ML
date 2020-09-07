@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 import sys
 from argparse import *
 
@@ -178,7 +178,6 @@ def help_ex():
     print('\trot -a "hello WORLD"')
     print('\trot -a "hello world" -r 11 -r=22 -r47 "@#$ABxy93" \n')
 
-#print('sys argv ',sys.argv)
 
 if __name__ == "__main__":
     if args.show:
@@ -196,9 +195,7 @@ if __name__ == "__main__":
             if args.output:
                 sys.stdout.close()
                 sys.stdout = temp
-                #print(sys.stdout)
                 read_output()
-            #print('Done.............')
             exit()
     else:
         parser.print_help()
